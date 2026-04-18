@@ -85,7 +85,7 @@ function buildProducts(
 
   const products: Product[] = []
 
-  for (const [productName, rows] of productMap) {
+  for (const [productName, rows] of Array.from(productMap.entries())) {
     const catName = rows[0].categoryName || '未分類'
 
     // Ensure category exists
